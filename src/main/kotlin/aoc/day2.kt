@@ -4,7 +4,7 @@ import readFile
 
 
 fun day2a() {
-    val lines = readFile("src/main/resources/day2A_input.txt")
+    val lines = readFile("day2A_input.txt")
 
     var horizontalPosition = 0
     var depth = 0
@@ -23,7 +23,7 @@ fun day2a() {
 }
 
 fun day2b() {
-    val lines = readFile("src/main/resources/day2A_input.txt")
+    val lines = readFile("day2A_input.txt")
 
     var horizontalPosition = 0
     var depth = 0

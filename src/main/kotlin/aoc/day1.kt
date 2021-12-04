@@ -3,7 +3,7 @@ package aoc
 import readFile
 
 fun day1a() {
-    val lines = readFile("src/main/resources/day1A_input.txt")
+    val lines = readFile("day1A_input.txt")
 
     var last: Int = lines.first().toInt()
     var increases = 0
@@ -19,9 +19,9 @@ fun day1a() {
 }
 
 fun day1b() {
-    val lines = readFile("src/main/resources/day1A_input.txt")
+    val lines = readFile("day1A_input.txt")
     val offset = 3
-    var last = 0
+    var last : Int
     var increases = 0
 
     last = lines.subList(0, offset - 1).sumOf { it.toInt() }
