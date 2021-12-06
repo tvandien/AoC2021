@@ -6,10 +6,9 @@ fun day6a(days: Int = 80) {
     val lines = readFile("day6_input.txt")
 
     val initialFish = lines.first().split(",").map { it.toInt() }
-    var fishByAge = MutableList<Long>(9) { 0 }
 
-    for (fish in initialFish) {
-        fishByAge[fish]++
+    var fishByAge = MutableList(9) { index ->
+        initialFish.count { it == index }.toLong()
     }
 
     for (i in 0 until days) {
