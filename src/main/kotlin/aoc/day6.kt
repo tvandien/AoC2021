@@ -7,7 +7,7 @@ fun day6a(days: Int = 80) {
 
     val initialFish = lines.first().split(",").map { it.toInt() }
 
-    var fishByAge = MutableList(9) { index ->
+    var fishByAge = List(9) { index ->
         initialFish.count { it == index }.toLong()
     }
 
@@ -20,8 +20,8 @@ fun day6a(days: Int = 80) {
     println("After $days days: $count")
 }
 
-fun simulateDay(today: MutableList<Long>): MutableList<Long> {
-    return MutableList(9) { index ->
+fun simulateDay(today: List<Long>): List<Long> {
+    return List(9) { index ->
         when (index) {
             6 -> today[7] + today[0]
             else -> today[(index + 1) % 9]
