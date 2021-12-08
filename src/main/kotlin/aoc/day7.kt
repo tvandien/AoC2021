@@ -14,7 +14,7 @@ fun day7a() {
 }
 
 fun day7b() {
-    val lines = readFile("day7_input.txt")
+    val lines = readFile("day7_example.txt")
     val numbers = lines.first().split(",").map { it.toInt() }.sorted()
 
     var minimalScore = Int.MAX_VALUE
@@ -24,10 +24,14 @@ fun day7b() {
         if (score < minimalScore) {
             minimalScore = score
             minimalPosition = i
+        } else {
+            break
         }
-        println("$i\t$score")
     }
 
+    val mean = (numbers.sum().toDouble() / numbers.size)
+
+    println("Mean: $mean")
     println("cheapest at position $minimalPosition. Score: $minimalScore")
 }
 
