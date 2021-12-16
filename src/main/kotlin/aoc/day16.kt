@@ -98,21 +98,21 @@ data class BITSPacket(val bitString: String) {
             }
             5 -> {
                 val subPackets = subPackets()
-                return when (subPackets.first().literalValue() > subPackets.last().literalValue() ) {
+                return when (subPackets.first().literalValue() > subPackets.last().literalValue()) {
                     true -> 1
                     false -> 0
                 }
             }
             6 -> {
                 val subPackets = subPackets()
-                return when (subPackets.first().literalValue() < subPackets.last().literalValue() ) {
+                return when (subPackets.first().literalValue() < subPackets.last().literalValue()) {
                     true -> 1
                     false -> 0
                 }
             }
             7 -> {
                 val subPackets = subPackets()
-                return when (subPackets.first().literalValue() == subPackets.last().literalValue() ) {
+                return when (subPackets.first().literalValue() == subPackets.last().literalValue()) {
                     true -> 1
                     false -> 0
                 }
