@@ -103,4 +103,10 @@ data class Coordinate(val x: Int, val y: Int) {
     private fun down(): Coordinate = Coordinate(x, y+1)
 
     fun neighbors(): List<Coordinate> = listOf(left(), right(), up(), down())
+
+    fun inboundNeighbors(width: Int, height: Int): List<Coordinate> {
+        return neighbors().filter { neighbor ->
+            neighbor.x in 0 until width && neighbor.y in 0 until height
+        }
+    }
 }
